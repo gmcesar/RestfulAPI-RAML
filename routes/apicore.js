@@ -10,27 +10,24 @@ function isEmptyObject(obj) {
 router.get('/customers', function(req, res, next) {
   if(isEmptyObject(req.query)) {
     Customer.find({}).then(function(customers) {
-      res.send(customers);
+      res.status(200).send(customers);
     });
   } else {
     Customer.find(req.query).then(function(customers) {
-      res.send(customers);
+      res.status(200).send(customers);
     })﻿;
   }
-  console.log(req.query);
 });
 //get a customer
 router.get('/customers/:id', function(req, res, next) {
   Customer.find({_id: req.params.id}).then(function(customer) {
-    res.send(customer);
-  });
-  console.log(req.query);
+    res.status(200).send(customer);
+  }).catch(next);
 });
 //add a new customer to the db
 router.post('/customers', function(req, res, next) {
   Customer.create(req.body).then(function(customer) {
-    console.log('here');
-    res.send(customer);
+    res.status(201).send(customer);
   }).catch(next);
 });
 //update a customer in the db
@@ -39,14 +36,13 @@ router.put('/customers/:id', function(req, res, next) {
     Customer.findOne({_id: req.params.id}).then(function(customer) {
       res.send(customer);
     });
-  });
+  }).catch(next);
 });
 //delete a customer from the db
 router.delete('/customers/:id', function(req, res, next) {
-  console.log(req.params.id);
   Customer.findByIdAndRemove({_id: req.params.id}).then(function(customer) {
     res.send(customer);
-  });
+  }).catch(next);
 });
 
 module.exports = router;
