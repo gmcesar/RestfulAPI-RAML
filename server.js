@@ -13,6 +13,8 @@ app.use(bodyParser.json());
 
 //initialize routes
 app.use('/api', require('./routes/apicore'));
+app.use('/api/m', require('./routes/apiM'));
+app.use('/api/c', require('./routes/apiC'));
 
 //error handling middleware
 app.use(function(err, req, res, next) {
