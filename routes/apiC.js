@@ -8,14 +8,16 @@ function isEmptyObject(obj) {
 }
 //get customers
 router.get('/customers', function(req, res, next) {
-  if(isEmptyObject(req.query)) {
+  if(req.query.copy === 'true') {
+    console.log('copy');
     Customer.find({}).then(function(customers) {
       res.status(200).send(customers);
-    });
-  } else {
+    });/*
     Customer.find(req.query).then(function(customers) {
       res.status(200).send(customers);
-    })﻿;
+    })﻿;*/
+  } else {
+    res.status(400).send('Bad Request');
   }
 });
 
