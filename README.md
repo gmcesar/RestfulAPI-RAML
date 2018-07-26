@@ -16,7 +16,7 @@ Example of RestfulAPI designed in RAML and built in Node.js
 
 ### Use Case 1:
 
-- Consumes an endpoint using the GET method and the parameter 'copy' to request the API to maintain a copy of the customer. An interface was created based on the specific requirements for the consumer, allowing it (the consumer) to access only the resources needed.
+- Consumes an endpoint using the GET method and the query component '`?copy=true`' to request the API to maintain a copy of the customer. An interface was created based on the specific requirements for the consumer, allowing it (the consumer) to access only the resources needed.
 
 `The endpoint for this consumer: http://localhost:4000/api/c/customers/`
 
