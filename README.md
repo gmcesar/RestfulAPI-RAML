@@ -18,7 +18,7 @@ Example of RestfulAPI designed in RAML and built in Node.js
 
 - Consumes an endpoint using the GET method and the query component '`?copy=true`' to request the API to maintain a copy of the customer. An interface was created based on the specific requirements for the consumer, allowing it (the consumer) to access only the resources needed.
 
-`The endpoint for this consumer: http://localhost:4000/api/c/customers/`
+- The endpoint for this consumer: `http://localhost:4000/api/c/customers/`
 
 ### Use Case 2:
 
@@ -27,7 +27,7 @@ Example of RestfulAPI designed in RAML and built in Node.js
         a. Scope limitation to the core API(i.e. only retrieve and update customer details per requirement).
         b. Control and optimise resource allocation to mobile traffic to cater for limitations such as connection speed and data usage/cost.
     
-`Endpoint for mobile consumers: http://localhost:4000/api/m/customers/`
+- The endpoint for mobile consumers: `http://localhost:4000/api/m/customers/`
 
 ### Use Case 3:
 
