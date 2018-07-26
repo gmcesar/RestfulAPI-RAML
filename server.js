@@ -1,12 +1,14 @@
 const express = require('express');             //Call express
 const bodyParser = require('body-parser');      //Call body-parser
 const mongoose = require('mongoose');           //Call mongoose
+const PROPERTIES = require('./assets/properties');
 
 //set up express app
 const app = express();
 
 //conect to mongodb
-mongoose.connect('mongodb://test:test123@ds243501.mlab.com:43501/njsappdb', { useNewUrlParser: true });
+//mongoose.connect('mongodb://test:test123@ds243501.mlab.com:43501/njsappdb', { useNewUrlParser: true });
+mongoose.connect(PROPERTIES.mongo, { useNewUrlParser: true });
 
 //mongoose.Promise = global.Promise;
 app.use(bodyParser.json());

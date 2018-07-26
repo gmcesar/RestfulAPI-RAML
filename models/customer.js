@@ -14,8 +14,5 @@ const CustomerSchema = new Schema({
   addresses: [String]
 });
 
-//Structure example
-
-
 //const Customer = mongoose.model('customer', CustomerSchema);
 module.exports = mongoose.model('customer', CustomerSchema);

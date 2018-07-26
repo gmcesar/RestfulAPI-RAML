@@ -2,11 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Customer = require('../models/customer');
 
-//Is an Empty Object
-function isEmptyObject(obj) {
-  return !Object.keys(obj).length;
-}
-
 //get a customer
 router.get('/customers/:id', function(req, res, next) {
   Customer.find({_id: req.params.id}).then(function(customer) {
