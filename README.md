@@ -25,7 +25,7 @@ Example of RestfulAPI designed in RAML and built in Node.js
 - The mobile device consumes an endpoint using the GET (retrieve customer) and PUT (update customer) methods. This endpoint belongs to an additional interface created for this specific use case (mobile consumers) to emulate a consumer experience-based API and allows:
 
         a. Scope limitation to the core API(i.e. only retrieve and update customer details per requirement).
-        b. Control and optimise resource allocation to mobile traffic to cater to limitations such as connection speed and data usage/cost.
+        b. Control and optimise resource allocation to mobile traffic to cater for limitations such as connection speed and data usage/cost.
     
 `Endpoint for mobile consumers: http://localhost:4000/api/m/customers/`
 
